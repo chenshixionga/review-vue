@@ -21,8 +21,13 @@
       <!--别名alias-->
        <router-link to="/aliasTest">别名</router-link>
     </p>
+    <p>
+      <button @click="goBack()">回退</button>
+      <button @click="goHome()">首页</button>
+      <router-link to="/count">Count组件</router-link>
+    </p>
     <router-view/>
-    <transition name="fade">
+    <transition name="fade" mode="out-in">
       <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>
     </transition>
     <router-view name="right" style="float:right;width:50%;background-color:#c0c;height:300px;"></router-view>
@@ -32,7 +37,21 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+      return{
+          msg:'主页面'
+      }
+  },
+  methods:{
+      goBack(){
+          console.log("goback")
+          this.$router.go(-1);
+      },
+      goHome(){
+          this.$router.push("/");
+      }
+  }
 }
 </script>
 
@@ -50,7 +69,7 @@ export default {
   opacity:0;
 }
 .fade-enter-active{
-  transition:opacity 1s;
+  transition:opacity 2s;
 }
 .fade-leave{
   opacity:1;

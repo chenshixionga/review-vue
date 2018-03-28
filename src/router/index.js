@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Hi from '@/components/Hi'
-import Hi1 from '@/components/Hi1'
-import Hi2 from '@/components/Hi2'
-import Hi11 from '@/components/Hi11'
-import Hi22 from '@/components/Hi22'
+import HelloWorld from '@/components/routerDemo/HelloWorld'
+import Hi from '@/components/routerDemo/Hi'
+import Hi1 from '@/components/routerDemo/Hi1'
+import Hi2 from '@/components/routerDemo/Hi2'
+import Hi11 from '@/components/routerDemo/Hi11'
+import Hi22 from '@/components/routerDemo/Hi22'
+import Error from '@/components/routerDemo/Error'
+import Count from '@/components/vuexDemo/Count'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
@@ -50,13 +53,25 @@ export default new Router({
       }
     },{
        path:'/url/:username',
-       component:Hi1
+       component:Hi1,
+      beforeEnter:(to,from,next)=>{
+        console.log('我进入了params模板');
+        console.log(to);
+        console.log(from);
+        next();
+       }
     },{
       path:'/redirect',
       redirect:'/hi'
     },{
        path:'/redirect/:username',
        redirect:'/url/:username'
+    },{
+      path:'*',
+      component:Error
+    },{
+      path:'/count',
+      component:Count
     }
   ]
 })
