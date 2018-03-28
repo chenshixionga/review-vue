@@ -1,0 +1,22 @@
+
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'hi',
+    data () {
+      return {
+        msg: 'Hi, I am Hi22 page'
+      }
+    }
+  }
+</script>
+
+
+<style scoped>
+
+</style>
