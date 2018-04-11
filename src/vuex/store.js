@@ -25,8 +25,11 @@ const getters = {
 const actions ={
   addAction(context,n){
     context.commit('add',n)
-    // setTimeOut(()=>{context.commit(reduce)},3000);
-    // console.log('我比reduce提前执行');
+    setTimeout(()=>{
+      context.commit('reduce')
+      console.log('异步reduce')
+    },3000);
+    console.log('我比reduce提前执行');
   },
 
   reduceAction({commit}){
