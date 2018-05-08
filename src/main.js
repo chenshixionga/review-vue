@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from '@/vuex/store'
 import SlotChild from '@/components/componentDemo/SlotChild'
 import FocusDirective from '@/components/directiveDemo/focusDirective'
 import GlobalDirective from '@/components/directiveDemo/globalDirective'
@@ -18,6 +19,7 @@ Vue.component('focusDirective',FocusDirective)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

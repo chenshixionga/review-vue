@@ -1,0 +1,10 @@
+diff a/src/App.vue b/src/App.vue	(rejected hunks)
+@@ -22,7 +22,7 @@
+       <router-link to="/aliasTest">åˆ«å</router-link>
+     </p>
+     <p>
+-      <button @click="goBack()">å›žé€€</button>
++      <button @click="goBack()" class="test">å›žé€€</button>
+       <button @click="goHome()">é¦–é¡µ</button>
+       <router-link to="/count">Countç»„ä»¶</router-link>
+     </p>

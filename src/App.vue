@@ -22,7 +22,7 @@
       <router-link to="/aliasTest">别名</router-link>
     </p>
     <p>
-      <button @click="goBack()">回退</button>
+      <button @click="goBack()" class="test">回退</button>
       <button @click="goHome()">首页</button>
       <router-link to="/count">Count组件</router-link>
     </p>
@@ -124,5 +124,9 @@
   .fade-leave-active {
     opacity: 0;
     transition: opacity 2s;
+  }
+  
+  .test{
+    float: left;
   }
 </style>
