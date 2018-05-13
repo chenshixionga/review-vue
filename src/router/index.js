@@ -11,6 +11,11 @@ import Count from '@/components/vuexDemo/Count'
 
 Vue.use(Router)
 
+//组件的懒加载
+const Lazy = () => import(/* webpackChunkName: "lazy" */ '@/components/routerDemo/lazyLoader')
+const Lazy1 = () => import(/* webpackChunkName: "lazy" */ '@/components/routerDemo/lazyLoader1')
+const Lazy2 = () => import(/* webpackChunkName: "lazy" */ '@/components/routerDemo/lazyLoader2')
+
 export default new Router({
   mode:'history',
   routes: [
@@ -18,6 +23,21 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/lazy',
+      name: 'lazy',
+      component: Lazy
+    },
+    {
+      path: '/lazy1',
+      name: 'lazy1',
+      component: Lazy1
+    },
+    {
+      path: '/lazy2',
+      name: 'lazy2',
+      component: Lazy2
     },
     {
       path: '/hi',
@@ -71,6 +91,7 @@ export default new Router({
       component:Error
     },{
       path:'/count',
+      name:'home',
       component:Count
     }
   ]
