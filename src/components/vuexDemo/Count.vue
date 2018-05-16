@@ -20,7 +20,6 @@
   </div>
 </template>
 <script>
-  import store from '@/vuex/store'
   import { mapState,mapMutations,mapGetters,mapActions} from 'vuex'
   export default{
     data(){
@@ -44,7 +43,6 @@
       ...mapMutations(['add','reduce'    ]),
       ...mapActions(['addAction','reduceAction'])
 
-    },
-    store
+    }
   }
 </script>

@@ -1,9 +1,10 @@
-
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
     <input v-focus/>
     <!--<input v-global/>-->
+    <!-- <input v-focus/> -->
+    <input v-globalDirective />
   </div>
 </template>
 

@@ -22,7 +22,7 @@
       <router-link to="/aliasTest">别名</router-link>
     </p>
     <p>
-      <button @click="goBack()">回退</button>
+      <button @click="goBack()" class="test">回退</button>
       <button @click="goHome()">首页</button>
       <router-link to="/count">Count组件</router-link>
     </p>
@@ -49,6 +49,11 @@
     </slot-child>
     <dynamic-component></dynamic-component>-->
     <focus-directive></focus-directive>
+    <part-filter></part-filter>
+    <button @click="axiosTest">testAxios</button>
+    <button @click="lazyTest">lazyTest</button>
+    <button @click="lazyTest1">lazyTest1</button>
+    <button @click="lazyTest2">lazyTest2</button>
   </div>
 </template>
 
@@ -58,6 +63,7 @@
   import Child from '@/components/componentDemo/Child'
   import ChildEvent from '@/components/componentDemo/ChildEvent'
   import VmodelChild from '@/components/componentDemo/VmodelChild'
+  import PartFilter from '@/components/filter/partFilter'
 //  import SlotChild from '@/components/componentDemo/SlotChild'
   import DynamicComponent from '@/components/componentDemo/DynamicComponent'
 //  指令
@@ -76,7 +82,8 @@
       'childEvent': ChildEvent,
       'vmodelChild':VmodelChild,
 //      'slotChild':SlotChild,
-      'dynamicComponent':DynamicComponent
+      'dynamicComponent':DynamicComponent,
+      'partFilter' :PartFilter
     },
     methods: {
       goBack(){
@@ -93,6 +100,26 @@
       },
       hoverNative(){
           console.log('native')
+      },
+      axiosTest(){
+        //  this.$axios.get('/sxtstu/blueberrypai/getchengpinDetails.php')
+        let url = this.api +"/v2/movie/top250"
+        console.log(url)
+        this.$axios.get(url,{
+          params:{
+            start:0,
+            count:10
+          }
+        })
+      },
+      lazyTest(){
+        this.$router.push('/lazy')
+      },
+      lazyTest1(){
+        this.$router.push('/lazy1')
+      },
+      lazyTest2(){
+        this.$router.push('/lazy2')
       }
     }
   }
@@ -124,5 +151,9 @@
   .fade-leave-active {
     opacity: 0;
     transition: opacity 2s;
+  }
+  
+  .test{
+    float: left;
   }
 </style>
