@@ -4,6 +4,7 @@ import HelloWorld from '@/components/routerDemo/HelloWorld'
 import Hi from '@/components/routerDemo/Hi'
 import Hi1 from '@/components/routerDemo/Hi1'
 import Hi2 from '@/components/routerDemo/Hi2'
+import Hi3 from '@/components/routerDemo/Hi3'
 import Hi11 from '@/components/routerDemo/Hi11'
 import Hi22 from '@/components/routerDemo/Hi22'
 import Error from '@/components/routerDemo/Error'
@@ -18,6 +19,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/hi3',
+      name: 'hi3',
+      component: Hi3
     },
     {
       path: '/hi',

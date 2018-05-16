@@ -12,7 +12,7 @@ Vue.config.productionTip = false
 //注册全局组件
 Vue.component('slotChild',SlotChild)
 Vue.component('focusDirective',FocusDirective)
-// Vue.directive()
+Vue.directive('global',GlobalDirective)
 
 /* eslint-disable no-new */
 new Vue({
