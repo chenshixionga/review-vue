@@ -26,11 +26,6 @@ export default new Router({
       component: HelloWorld
     },
     {
-<<<<<<< HEAD
-      path: '/hi3',
-      name: 'hi3',
-      component: Hi3
-=======
       path: '/lazy',
       name: 'lazy',
       component: Lazy
@@ -44,7 +39,6 @@ export default new Router({
       path: '/lazy2',
       name: 'lazy2',
       component: Lazy2
->>>>>>> f6fe5c2ad85a684232c2eb19f804db3489f52d33
     },
     {
       path: '/hi',
