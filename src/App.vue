@@ -54,6 +54,7 @@
     <button @click="lazyTest">lazyTest</button>
     <button @click="lazyTest1">lazyTest1</button>
     <button @click="lazyTest2">lazyTest2</button>
+    <button @click="contact">contact</button>
   </div>
 </template>
 
@@ -66,6 +67,7 @@
   import PartFilter from '@/components/filter/partFilter'
 //  import SlotChild from '@/components/componentDemo/SlotChild'
   import DynamicComponent from '@/components/componentDemo/DynamicComponent'
+  import { test } from '@/util/remoteData'
 //  指令
   export default {
     name: 'App',
@@ -120,6 +122,10 @@
       },
       lazyTest2(){
         this.$router.push('/lazy2')
+      },
+      contact(){
+        const val=test('contact')
+        console.log('val='+val)
       }
     }
   }

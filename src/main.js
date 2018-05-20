@@ -23,7 +23,7 @@ Vue.prototype.$axios = axios
 // 注册全局组件
 Vue.component('slotChild',SlotChild)
 Vue.component('focusDirective',FocusDirective)
-Vue.directive('global',GlobalDirective)
+
 // 注册全局组件
 Vue.directive('globalDirective',globalDirective)
 
