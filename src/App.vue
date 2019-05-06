@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    
+
     <img src="./assets/logo.png">
     <el-select v-model="value" placeholder="请选择">
       <el-option
@@ -40,7 +40,7 @@
       <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>
     </transition>
     <router-view name="right" style="float:right;width:50%;background-color:#c0c;height:300px;"></router-view>
-    <p>远端</p>
+    <div>好人</div>
     <!--<parent-componet></parent-componet>-->
    <!-- <child-component :propDemo="msg"></child-component>
     <ul>
@@ -185,7 +185,7 @@
     opacity: 0;
     transition: opacity 2s;
   }
-  
+
   .test{
     float: left;
   }
