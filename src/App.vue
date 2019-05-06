@@ -40,6 +40,7 @@
       <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>
     </transition>
     <router-view name="right" style="float:right;width:50%;background-color:#c0c;height:300px;"></router-view>
+    <p>远端</p>
     <!--<parent-componet></parent-componet>-->
    <!-- <child-component :propDemo="msg"></child-component>
     <ul>
