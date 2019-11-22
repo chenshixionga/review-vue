@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/routerDemo/HelloWorld'
+import componentHelloWorld from '@/components/routerDemo/HelloWorld'
+import HelloWorld from '@/views/helloWorld'
 import Hi from '@/components/routerDemo/Hi'
 import Hi1 from '@/components/routerDemo/Hi1'
 import Hi2 from '@/components/routerDemo/Hi2'
@@ -18,12 +19,17 @@ const Lazy1 = () => import(/* webpackChunkName: "lazy" */ '@/components/routerDe
 const Lazy2 = () => import(/* webpackChunkName: "lazy" */ '@/components/routerDemo/lazyLoader2')
 
 export default new Router({
-  mode:'history',
+  // mode:'history',
   routes: [
     {
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/component',
+      name: 'componentHelloWorld',
+      component: componentHelloWorld
     },
     {
       path: '/lazy',
